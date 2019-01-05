@@ -87,7 +87,7 @@ $(function () {
     // resetForm(true); 传true, 内容和状态都重置
     // reset按钮本生可以重置内容
     $("[type='reset']").click( function(){
-        console.log("啦啦");
+        // console.log("啦啦");
         $("#form").data('bootstrapValidator').resetForm();
     });
 

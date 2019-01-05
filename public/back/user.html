@@ -24,7 +24,7 @@
         </div>
         <div class="nav">
             <ul>
-                <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+                <li><a href="user.html" class="current"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
                 <li>
                     <a href="javascript:;" class="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
                     <div class="child">
@@ -45,49 +45,32 @@
                 <i class="glyphicon glyphicon-log-out"></i>
             </div>
         </div>
-        <div class="container-fluid">
-            <ol class="breadcrumb">
-                <li><a href="#">管理系统 </a></li>
-                <li class="active">首页</li>
-            </ol>
-        </div>
-
-        <!-- Button trigger modal -->
-        <!-- data-modal表示切换显示模态框 -->
-        <!-- data-target="#myModal" 具体显示哪个模态框, 通过id关联-->
-
-        <!-- <button data-toggle="modal" data-target="#myModal">Launch demo modal</button> -->
-        <div class="content">
-            <div class="echarts_1 pull-left"></div>
-            <div class="echarts_2 pull-right"></div>
-        </div>
-
     </div>
-    <!-- Modal 模态框-->
+    <!--  -->
     <div class="modal fade" id="myModal" tabindex="-1" >
-        <div class="modal-dialog modal-sm" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
-                </div>
-                <div class="modal-body">
-                    <p class="red"><i class="glyphicon glyphicon-info-sign" ></i>温馨提示您确定要退出后台管理系统吗？</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+            <div class="modal-dialog modal-sm" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="red"><i class="glyphicon glyphicon-info-sign" ></i>温馨提示您确定要退出后台管理系统吗？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- bootstrape的js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 进度条js包 -->
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
-    <!-- 判断是否登录 -->
+    <!-- 登录拦截 -->
     <script src="./js/islogin.js"></script>
 </body>
 
