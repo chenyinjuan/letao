@@ -176,3 +176,8 @@ li {
 /* #myModal .modal-body {
     padding: 20px;
 } */
+.table.table-bordered th,
+.table.table-bordered td {
+    text-align: center;
+    vertical-align: middle;
+}
