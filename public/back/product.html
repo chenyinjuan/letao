@@ -45,25 +45,63 @@
                 <i class="glyphicon glyphicon-log-out"></i>
             </div>
         </div>
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li><a href="#">管理系统 </a></li>
+                <li class="active">商品管理</li>
+            </ol>
+            <div class="btn btn-default add">添加商品</div>
+            <div class="second_table">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <th width="10%">序号</th>
+                        <th width="25%">一级分类名称</th>
+                        <th width="25W%">二级分类名称</th>
+                        <th width="10%">二级分类LOGO</th>
+                        <th width="10%">序号</th>
+                        <th width="10%">序号</th>
+                        <th width="10%">序号</th>
+                    </thead>
+                    <tbody>
+                        <!-- 挖个坑啊 -->
+                        <tr>
+                            <td>1</td>
+                            <td><span>【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋</span></td>
+                            <td>描述123123</td>
+                            <td>44</td>
+                            <td>35-56</td>
+                            <td>已上架</td>
+                            <td><div class="btn btn-danger">下架</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 分页容器 -->
+            <div class="pull-right">
+                <ul id="paginator"></ul>
+            </div>
+
+        </div>
 
     </div>
-    <div class="modal fade" id="myModal" tabindex="-1" >
-            <div class="modal-dialog modal-sm" >
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p class="red"><i class="glyphicon glyphicon-info-sign" ></i>温馨提示您确定要退出后台管理系统吗？</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
-                    </div>
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="red"><i class="glyphicon glyphicon-info-sign"></i>温馨提示您确定要退出后台管理系统吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
                 </div>
             </div>
         </div>
+    </div>
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- bootstrape的js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
