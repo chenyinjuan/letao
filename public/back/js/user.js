@@ -17,7 +17,8 @@ $(function () {
                 // var htmlstr = template("模板id","数据对象");
                 var htmlStr = template("user_tpl", res);
                 $('tbody').html(htmlStr);
-                $("#pagintor").bootstrapPaginator({
+                
+                $("#paginator").bootstrapPaginator({
                     bootstrapMajorVersion: 3, //默认是2，如果是bootstrap3版本，这个参数必填
                     currentPage: currentPage, //当前页
                     totalPages: Math.ceil(res.total / res.size), //总页数
