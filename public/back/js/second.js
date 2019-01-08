@@ -62,6 +62,7 @@ $(function () {
             }
         });
     });
+
     // 配置fileupload进行初始化
     $("#fileupload").fileupload({
         dataType: "json",
@@ -76,6 +77,7 @@ $(function () {
             $("#form").data("bootstrapValidator").updateStatus("brandLogo","VALID");
         }
     });
+
     // 5.表单验证校验
     $("#form").bootstrapValidator({
         // 配置不校验的类型,对hidden 需要进行校验
@@ -113,4 +115,22 @@ $(function () {
             }
         }
     });
+      // 6.注册表单校验成功事件,在成功准备提交表单时,阻止默认的提交,通过ajax提交
+      $("#form").on("success.form.bv", function( e ){
+          e.preventDefault();
+          $.ajax({
+              url: "/category/addSecondCategory",
+              dataType: "json",
+              type: "post",
+              data: $("#form").serialize(),
+              success: function( res ){
+                  console.log(res.success);
+                  if(res.success){
+                    $("#secondModal").modal("hide");
+                  }
+                  current = 1;
+                  render();
+              }
+          });
+      });
 });
