@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 进度条css样式 -->
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <!-- 校验的css样式 -->
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
 </head>
 
 <body>
     <div class="lt_aside">
-        <div class="brand">
+        <div class=" ">
             <a href="">黑马33期</a>
         </div>
         <div class="user">
@@ -64,15 +66,6 @@
                     </thead>
                     <tbody>
                         <!-- 挖个坑啊 -->
-                        <tr>
-                            <td>1</td>
-                            <td><span>【莹恋】MIZUNO美津浓V1GA159002乒乓球鞋男鞋女鞋室内综合训练鞋</span></td>
-                            <td>描述123123</td>
-                            <td>44</td>
-                            <td>35-56</td>
-                            <td>已上架</td>
-                            <td><div class="btn btn-danger">下架</div></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -85,6 +78,7 @@
         </div>
 
     </div>
+    <!-- 模态框 -->
     <div class="modal fade" id="myModal" tabindex="-1">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -102,6 +96,89 @@
             </div>
         </div>
     </div>
+    <!-- 模态框1 -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                        <div class="dropdown form-group">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                                data-toggle="dropdown">
+                                <span id="dropdownText">请选择二级分类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <!-- 挖两个坑啊 -->
+                            </ul>
+                            <input type="hidden" name="brandId">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入商品名称" name="proName">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="proDesc" id="" cols="30" rows="3" class="form-control" placeholder="请输入商品描述"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入商品库存"
+                                name="num">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品尺码" name="size">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品原价" name="oldPrice">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入商品现价" name="price">
+                        </div>
+                        <div class="form-group">
+                            <label for="fileupload" class="btn btn-default">上传图片</label>
+                            <input type="file" id="fileupload" style="display:none" multiple data-url="/product/addProductPic"
+                                name="pic1">
+                        </div>
+                        <div class="form-group" id="imgBox">
+                            <!-- <img style="width: 100px" src="./images/none.png" alt=""> -->
+                            <input type="hidden" name="picStatus">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-primary" id="addBtn">添加</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 模板1 -->
+    <script type="text/html" id="product_ptl">
+        {{each rows v i}}
+        <tr>
+                <td>{{i+1 + (page - 1)*size}}</td>
+                <td><span>{{v.proName}}</span></td>
+                <td>{{v.proDesc}}</td>
+                <td>{{v.num}}</td>
+                <td>{{v.size}}</td>
+                <td>{{v.statu}}</td>
+                <td>
+                    <div class="btn btn-danger">下架</div>
+                </td>
+            </tr>
+        {{/each}}
+    </script>
+    <!-- 模板2 -->
+    <script type="text/html" id="dropdown_ptl">
+        {{each rows v i}}
+        <li><a href="#" data-id={{v.id}}>{{v.brandName}}</a></li>
+        {{/each}}
+    </script>
+    <!-- jquery的包 -->
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- bootstrape的js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
@@ -110,6 +187,18 @@
     <script src="./js/common.js"></script>
     <!-- 登录拦截 -->
     <script src="./js/islogin.js"></script>
+    <!-- 本页的js包 -->
+    <script src="./js/product.js"></script>
+    <!-- 模板引擎js包 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 分页的插件 -->
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <!-- 文件上传的js包 -->
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+    <!-- 校验的js包 -->
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+
 </body>
 
 </html>
