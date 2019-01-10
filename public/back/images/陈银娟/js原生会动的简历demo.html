@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style id="styleTag">
+    </style>
+</head>
+
+<body>
+    <pre id="code">
+    </pre>
+    <script>
+        var str =
+            `/*
+        * 面试官你好,我是陈银娟
+        * 我将以动画的形式来介绍我自己
+        * 只用文字介绍来太单调了吧
+        * 我就是代码来介绍吧
+        * 首先准备一些样式
+        */
+       *{
+           transition: all 1s;
+       }
+       html{
+           width: 1000px;
+           height: 800px;
+           background-color: rgb(222,222,222);
+           font-size: 16px;
+       }
+       #code{
+           border: 1px solid red;
+           padding: 8px;
+       }
+       #code{
+           transform: rotate(360deg);
+       }
+        `;
+        console.log(str.slice(0, 10));
+        var n = 0;
+        var id = setInterval(function () {
+            n += 1;
+            code.innerHTML = str.slice(0, n);
+            styleTag.innerHTML = str.slice(0, n);
+            console.log(n);
+
+            if (n >= str.length) {
+                // 10
+                window.clearInterval(id);
+            }
+        }, 50);
+        // setTimeout( function(){
+        //     document.body.innerHTML = '1';
+        // },1000);
+        // setTimeout( function(){
+        //     document.body.innerHTML = '12';
+        // },2000);
+        // setTimeout( function(){
+        //     document.body.innerHTML = '123';
+        // },3000);
+    </script>
+</body>
+
+</html>

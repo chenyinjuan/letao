@@ -1,0 +1,23 @@
+/*
+        * 面试官你好,我是陈银娟
+        * 我将以动画的形式来介绍我自己
+        * 只用文字介绍来太单调了吧
+        * 我就是代码来介绍吧
+        * 首先准备一些样式
+        */
+       *{
+           transition: all 1s;
+       }
+       html{
+           width: 1000px;
+           height: 800px;
+           background-color: rgb(222,222,222);
+           font-size: 16px;
+       }
+       #code{
+           border: 1px solid red;
+           padding: 8px;
+       }
+       #code{
+           transform: rotate(360deg);
+       }

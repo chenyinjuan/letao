@@ -1,0 +1,96 @@
+/* ul的样式重置 */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    position: relative;
+    overflow: hidden;
+}
+.container .lt_header,
+.container .lt_footer
+{
+    position: absolute;
+    width: 100%;
+    background-color: #006699;
+}
+.container .lt_header{
+    top: 0;
+    left: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.container .lt_header h3{
+    margin: 0;
+    height: 45px;
+    line-height: 45px;
+    font-weight: normal;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+.container .lt_header a{
+    width: 45px;
+    height: 45px;
+    background-color: #006699;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 45px;
+}
+.container .lt_header .left{
+
+    left: 0;
+}
+.container .lt_header .right{
+    right: 0;
+}
+.container .lt_footer{
+    bottom: 0;
+    left: 0;
+    height: 55px;
+    background-color: #006699;
+}
+.container .lt_header i{
+    color: #fff;
+}
+.container .lt_footer ul li {
+    float: left;
+    width: 25%;
+    height: 50px;
+}
+.container .lt_footer ul li a{
+    display: block;
+    height: 50px;
+    text-align: center;
+    padding-top: 8px;
+}
+.container .lt_footer ul li a p{
+    color: #fff;
+}
+.container .lt_footer ul li i{
+    color: #fff;
+}
+/* 主题部分 */
+.container .lt_main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.container .lt_footer li.current i,
+.container .lt_footer li.current p{
+    color: orange;
+}

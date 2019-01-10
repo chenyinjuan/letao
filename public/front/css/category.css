@@ -1,0 +1,44 @@
+.container .lt_main .lt_left{
+    float: left;
+    width: 90px;
+    height: 100%;
+}
+.container .lt_main .lt_left li{
+    width: 90px;
+    height: 50px;
+}
+.lt_left li a{
+    display: block;
+    height: 50px;
+    background-color: #fff;
+    background-color: #E3E4E5;
+    color: #666;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.container .lt_main .lt_right{
+    /* background-color: red; */
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container .lt_main .lt_right li{
+    float: left;
+    width: 33.333%;
+}
+.container .lt_main .lt_right li a{
+    display: block;
+    text-align: center;
+}
+.container .lt_main .lt_right li a img{
+    width: 70px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.container  .lt_main .lt_left li a.current{
+    background-color: #fff;
+    border: none;
+}
